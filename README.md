@@ -16,7 +16,8 @@ TYPE OF COMMIT/CHANGES: insert short explanation of changes
 
 ### DEPENDENCIES
 1. To run the code properly, you must first install all necessary libaries listed in the dependencies.txt file. To do this, type this command in your terminal:
-''pip install -r dependencies.txt''
+   
+   pip install -r dependencies.txt
 
-2. If you need to add another library, type it in the dependencies.txt, so we can install it again
+3. If you need to add another library, type it in the dependencies.txt, so we can install it again
 

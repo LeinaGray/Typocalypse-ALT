@@ -13,13 +13,16 @@ from Player import *
 # create and set player 
 player = Player(PLAYER_IMG, PLAYER_DEFAULT_X, PLAYER_DEFAULT_Y)
 
-
+# create the game loop
 running = True
 while running:
+    # iterate through all events such as keyboard press or mouse clicks
     for event in pygame.event.get():
+        # close program if user clicks exit button on window
         if event.type == pygame.QUIT:
             running = False
-    
+            
+    # show player on window
     window.show(player.image, player.position)
             
 

@@ -3,7 +3,7 @@
 # DEFAULT WINDOW SETUP
 WIDTH = 1280
 HEIGHT = 720
-BACKGROUND_IMG = "content/background/temp_background.png"
+TILE_IMG = "content/background/temp_background.png"
 FPS = 60
 
 # DEFAULT PLAYER SETUP

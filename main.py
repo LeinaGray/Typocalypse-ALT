@@ -5,7 +5,7 @@ from settings import *
 from Window import *
 # create and set window
 window = Window(WIDTH, HEIGHT, "Typocalypse")
-window.setBackground(BACKGROUND_IMG)
+window.setBackground(TILE_IMG)
 window.setFrameRate(FPS)
 
 # import player

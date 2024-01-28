@@ -19,6 +19,8 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+    
+    window.show(player.image, player.position)
             
 
     # Update game elements and draw on the window here

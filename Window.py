@@ -11,5 +11,10 @@ class Window():
     def setBackground(self,file_path):
         self.background = pygame.image.load(file_path).convert()
         self.screen.blit(self.background,(0,0))
-        
-        
+    
+    def setFrameRate(self, FPS):
+        self.clock = pygame.time.Clock()
+        self.clock.tick()
+    
+    def show(self, sprite, position):
+        self.screen.blit(sprite, position)

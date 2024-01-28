@@ -1,9 +1,17 @@
 import pygame 
 from settings import *
-from Window import *
 
+# import window
+from Window import *
+# create and set window
 window = Window(WIDTH, HEIGHT, "Typocalypse")
-window.setBackground(BACKGROUND_FILE_PATH)
+window.setBackground(BACKGROUND_IMG)
+window.setFrameRate(FPS)
+
+# import player
+from Player import *
+# create and set player 
+player = Player(PLAYER_IMG, PLAYER_DEFAULT_X, PLAYER_DEFAULT_Y)
 
 
 running = True

@@ -22,8 +22,13 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    # show player on window
-    window.show(player.image, player.position)
+    # show player on window and use the player's rectangle as position
+    window.show(player.image, player.rect)
+    player.setRotatable(True)
+    pygame.draw.rect(window.screen, "red", player.hitbox_rectangle, width=2)
+    
+    # show rectangle of player (optional and glitchy)
+    # pygame.draw.rect(window.screen, "yellow", player.rect, width=1)
             
 
     # Update game elements and draw on the window here

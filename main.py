@@ -11,7 +11,7 @@ entered_text = ""
 from Window import *
 # create and set window
 window = Window(WIDTH, HEIGHT, "Typocalypse", TYPE_FONT)
-# window.setBackground(TILE_IMG)
+window.setBackground(TILE_IMG)
 window.setFrameRate(FPS)
 
 # import player

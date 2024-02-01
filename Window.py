@@ -44,7 +44,7 @@ class Window():
     def show(self, sprite, position):
         self.screen.blit(sprite, position)
     
-    def drawScreen(self, FONT_FILE_PATH, level, user_typed_text):
+    def drawScreen(self, FONT_FILE_PATH, level):
         # bottom panel
         pygame.draw.rect(self.screen, "black", [0, self.height-100, self.width, 100], 0)
         # short vertical border line to separate user input from level
@@ -53,9 +53,11 @@ class Window():
         pygame.draw.line(self.screen, (100,100,100), (0, self.height-100), (self.width, self.height-100), 2)
 
         # draw text on screen
-        font = pygame.font.Font(FONT_FILE_PATH, 50)
-        self.screen.blit(font.render(f"Level: {level}", True, "white"), (20, self.height-85))
-        self.screen.blit(font.render(f"{user_typed_text}", True, "white"), (270, self.height-85))
+        self.font = pygame.font.Font(FONT_FILE_PATH, 50)
+        self.screen.blit(self.font.render(f"Level: {level}", True, "white"), (20, self.height-85))
+    
+    def showTyping(self, user_typed_text):
+        self.screen.blit(self.font.render(f"{user_typed_text}", True, "white"), (270, self.height-85))
     
     # def showStats(self, FONT_FILE_PATH, best_score, score, lives):
     #     font = pygame.font.Font(FONT_FILE_PATH, 50)

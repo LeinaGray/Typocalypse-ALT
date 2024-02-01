@@ -44,11 +44,15 @@ class Window():
     def show(self, sprite, position):
         self.screen.blit(sprite, position)
     
-    def drawScreen(self):
+    def drawScreen(self, FONT_FILE_PATH, level):
         # bottom panel
         pygame.draw.rect(self.screen, "black", [0, self.height-100, self.width, 100], 0)
         # short vertical border line to separate user input from level
         pygame.draw.line(self.screen, (100,100,100), (250, self.height-100), (250, self.height), 2)
         # horizontal border line above panel
         pygame.draw.line(self.screen, (100,100,100), (0, self.height-100), (self.width, self.height-100), 2)
+
+        # draw text on screen
+        font = pygame.font.Font(FONT_FILE_PATH, 50)
+        self.screen.blit(font.render(f"Level: {level}", True, "white"), (20, self.height-85))
         

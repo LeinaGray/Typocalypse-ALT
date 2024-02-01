@@ -23,7 +23,7 @@ while running:
             running = False
 
     # show player on window and use the player's rectangle as position
-    window.drawScreen()
+    window.drawScreen(TYPE_FONT, game.level)
     window.show(player.image, player.rect)
     player.setRotatable(True)
     pygame.draw.rect(window.screen, "red", player.hitbox_rectangle, width=2)

@@ -11,3 +11,6 @@ PLAYER_DEFAULT_X = 45 #further away from the wall
 PLAYER_DEFAULT_Y = HEIGHT/2 #place to center
 PLAYER_IMG = "content/sprites/player.png"
 SIZE = 0.35
+
+# SCREEN DESIGN SETUP
+TYPE_FONT = "content/fonts/Poppins-Regular.ttf"

@@ -14,3 +14,4 @@ SIZE = 0.35
 
 # SCREEN DESIGN SETUP
 TYPE_FONT = "content/fonts/Poppins-Regular.ttf"
+TEST_STRING = "TYPE HERE"

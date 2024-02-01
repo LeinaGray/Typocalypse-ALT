@@ -31,7 +31,6 @@ while running:
     # window.showStats(TYPE_FONT, game.level, game.best_score, game.score, game.lives)
 
     # show player on window and use the player's rectangle as position
-    window.drawScreen(TYPE_FONT, game.level)
     window.show(player.image, player.rect)
     player.setRotatable(True)
     pygame.draw.rect(window.screen, "red", player.hitbox_rectangle, width=2)

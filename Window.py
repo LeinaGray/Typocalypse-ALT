@@ -44,7 +44,7 @@ class Window():
     def show(self, sprite, position):
         self.screen.blit(sprite, position)
     
-    def drawScreen(self, FONT_FILE_PATH, level):
+    def drawScreen(self, FONT_FILE_PATH, level, user_typed_text):
         # bottom panel
         pygame.draw.rect(self.screen, "black", [0, self.height-100, self.width, 100], 0)
         # short vertical border line to separate user input from level

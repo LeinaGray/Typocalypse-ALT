@@ -1,6 +1,10 @@
 import pygame 
 from settings import *
 
+# import game
+from Game import *
+game = Game()
+
 # import window
 from Window import *
 # create and set window

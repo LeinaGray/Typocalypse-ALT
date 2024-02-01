@@ -28,7 +28,7 @@ while running:
 
     
     window.drawScreen(TYPE_FONT, game.level, TEST_STRING)
-    window.showStats(TYPE_FONT, game.level, game.best_score, game.score, game.lives)
+    # window.showStats(TYPE_FONT, game.level, game.best_score, game.score, game.lives)
 
     # show player on window and use the player's rectangle as position
     window.drawScreen(TYPE_FONT, game.level)

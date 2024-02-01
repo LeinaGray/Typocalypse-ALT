@@ -57,10 +57,10 @@ class Window():
         self.screen.blit(font.render(f"Level: {level}", True, "white"), (20, self.height-85))
         self.screen.blit(font.render(f"{user_typed_text}", True, "white"), (270, self.height-85))
     
-    def showStats(self, FONT_FILE_PATH, best_score, score, lives):
-        font = pygame.font.Font(FONT_FILE_PATH, 50)
+    # def showStats(self, FONT_FILE_PATH, best_score, score, lives):
+    #     font = pygame.font.Font(FONT_FILE_PATH, 50)
         
-        self.screen.blit(font.render(f"Best Score: {best_score}", True, "white"), (10, 10))
-        self.screen.blit(font.render(f"Score: {score}", True, "white"), (self.width-50, 10))
-        self.screen.blit(font.render(f"Lives: {lives}", True, "white"), (self.width-100, 10))
+    #     self.screen.blit(font.render(f"Best Score: {best_score}", True, "white"), (10, 10))
+    #     self.screen.blit(font.render(f"Score: {score}", True, "white"), (self.width-50, 10))
+    #     self.screen.blit(font.render(f"Lives: {lives}", True, "white"), (self.width-100, 10))
         

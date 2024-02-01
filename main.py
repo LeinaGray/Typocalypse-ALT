@@ -23,7 +23,7 @@ player = Player(PLAYER_IMG, SIZE, PLAYER_DEFAULT_X, PLAYER_DEFAULT_Y)
 running = True
 while running:
     window.drawScreen(game.level)
-    window.showStats("Best Score: ", game.best_score, (10,10), 20)
+    window.showStats("Best Score: ", game.best_score, (10,10), 50)
     window.showStats("Score: ", game.score, (WIDTH/2-100,10), 20)
     window.showStats("Lives: ", game.lives, (WIDTH-100,10), 20)
     

@@ -2,13 +2,14 @@ import pygame.display
 
 # Create the window
 class Window():
-    def __init__(self, width, height, title):
+    def __init__(self, width, height, title, font_file_path):
         # super(Window, self).__init__()
         pygame.init()
         self.width = width
         self.height = height
         self.screen = pygame.display.set_mode((width, height))
         self.title = pygame.display.set_caption(title)
+        self.font = font_file_path
 
     # set background using a full background image
     def setBackground(self,file_path):
@@ -44,7 +45,7 @@ class Window():
     def show(self, sprite, position):
         self.screen.blit(sprite, position)
     
-    def drawScreen(self, FONT_FILE_PATH, level):
+    def drawScreen(self, level):
         # bottom panel
         pygame.draw.rect(self.screen, "black", [0, self.height-100, self.width, 100], 0)
         # short vertical border line to separate user input from level
@@ -53,16 +54,21 @@ class Window():
         pygame.draw.line(self.screen, (100,100,100), (0, self.height-100), (self.width, self.height-100), 2)
 
         # draw text on screen
-        self.font = pygame.font.Font(FONT_FILE_PATH, 50)
-        self.screen.blit(self.font.render(f"Level: {level}", True, "white"), (20, self.height-85))
+        font = pygame.font.Font(self.font, 50)
+        self.screen.blit(font.render(f"Level: {level}", True, "white"), (20, self.height-85))
     
     def showTyping(self, user_typed_text):
-        self.screen.blit(self.font.render(f"{user_typed_text}", True, "white"), (270, self.height-85))
+        font = pygame.font.Font(self.font, 50)
+        self.screen.blit(font.render(f"{user_typed_text}", True, "white"), (270, self.height-85))
     
     # def showStats(self, FONT_FILE_PATH, best_score, score, lives):
     #     font = pygame.font.Font(FONT_FILE_PATH, 50)
         
     #     self.screen.blit(font.render(f"Best Score: {best_score}", True, "white"), (10, 10))
-    #     self.screen.blit(font.render(f"Score: {score}", True, "white"), (self.width-50, 10))
+    #     self.screen.blit(font.render(f"Score: {score}", True, "white"), (self.width/2-50, 10))
     #     self.screen.blit(font.render(f"Lives: {lives}", True, "white"), (self.width-100, 10))
+    
+    def showStats(self, stats_header, stats_value, position_coordinates, font_size):
+        font = pygame.font.Font(self.font, font_size)
+        self.screen.blit(font.render(f"{stats_header}{stats_value}", True, "white"), position_coordinates)
         

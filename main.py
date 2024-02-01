@@ -10,7 +10,7 @@ entered_text = ""
 # import window
 from Window import *
 # create and set window
-window = Window(WIDTH, HEIGHT, "Typocalypse")
+window = Window(WIDTH, HEIGHT, "Typocalypse", TYPE_FONT)
 window.setBackground(TILE_IMG)
 window.setFrameRate(FPS)
 
@@ -22,7 +22,11 @@ player = Player(PLAYER_IMG, SIZE, PLAYER_DEFAULT_X, PLAYER_DEFAULT_Y)
 # create the game loop
 running = True
 while running:
-    window.drawScreen(TYPE_FONT, game.level)
+    window.drawScreen(game.level)
+    window.showStats("Best Score: ", game.best_score, (10,10), 20)
+    window.showStats("Score: ", game.score, (WIDTH/2-100,10), 20)
+    window.showStats("Lives: ", game.lives, (WIDTH-100,10), 20)
+    
     window.showTyping(current_text)
     # iterate through all events such as keyboard press or mouse clicks
     for event in pygame.event.get():
@@ -41,6 +45,7 @@ while running:
     
     
     # window.showStats(TYPE_FONT, game.level, game.best_score, game.score, game.lives)
+    
 
     # show player on window and use the player's rectangle as position
     window.show(player.image, player.rect)
